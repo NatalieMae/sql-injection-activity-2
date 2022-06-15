@@ -8,12 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        if(document.location.hash === '#unauthorized') {
-            document.write('<div class=#unauthorized>Invalid Username or Password</div>');
-        } else if(document.location.hash === '#error') {
-        document.write('<div class=#error>An error has occured</div>');
-        }
-    </script>
+    <form action="/login" method="POST">
+        <div className="container">
+            <label for="username">User Name</label>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd">
+            <script>
+                if(document.location.hash === '#unauthorized') {
+                document.write('<div class=#unauthorized>Invalid Username or Password</div>');
+                } else if(document.location.hash === '#error') {
+                document.write('<div class=#error>An error has occured</div>');
+                }
+            </script>
+        </div>
+    </form>    
 </body>
 </html>
