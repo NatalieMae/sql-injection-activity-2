@@ -28,9 +28,9 @@ db.get(query, function (err, row) {
 	} else if (!row) {
 		res.redirect('/index.html#unauthorized');
 	} else {
-		// res.send('Hello <b>' + row.title + '!</b><br />; 
-		// This file contains all your secret data: <br /><br /> 
-		// SECRETS <br /><br /> MORE SECRETS <br /><br /> 
-		// <a href="/index.html">Go back to login</a>');
+		res.send('Hello <b>' + row.title + '!row</b><br />; 
+		"This file contains all your secret data: <br /><br /> 
+		SECRETS <br /><br /> MORE SECRETS <br /><br /> "
+		<a href="/index.html">Go back to login</a>');
 	}
 });
